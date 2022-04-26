@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Nacionalidade</title>
+</head>
+<body>
+    <h1>Só me interessa se for Brasileiro!!!</h1>
+    Qual país você é: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var txtp = window.document.getElementById('txtpais')
+            var res = window.document.querySelector('div#res')
+            var resp = txtp.value
+            res.innerHTML = `<p>Seu país é ${resp}</p>`
+            if (resp == 'Brasil', 'brasil') {
+                res.innerHTML += `<p>Parabéns você é Brasileiro e merece estar nesse domínio!</p>`
+            } else {
+                res.innerHTML += `<p>Saia já deste domínio!</p>` 
+            }
+        }
+    </script>
+</body>
+</html>
