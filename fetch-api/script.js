@@ -1,5 +1,5 @@
 function fetchApiData() {
-    fetch('https://jsonplaceholder.typicode.com/todos/')
+    fetch('https://swapi.dev/api/people')
     .then(response => response.json())
     .then(data => {
         const list = document.querySelector('#fill_list')
@@ -7,8 +7,8 @@ function fetchApiData() {
         data.map((item) => {
             const li = document.createElement('li');
 
-            li.setAttribute('id', item.id);
-            li.innerHTML = item.title;
+            li.setAttribute('id', item.results);
+            li.innerHTML = item.name;
             list.appendChild(li);
         })
     })
